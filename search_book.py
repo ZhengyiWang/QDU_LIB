@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#coding:utf-8
+# coding:utf-8
 
 import requests
 import urllib2
@@ -17,21 +17,21 @@ TITLE = 'a'
 PageNum = 20
 
 # 书目查询
-API = '/cgi-bin/IlaswebBib?v_index=TITLE&v_value=' + TITLE + '&FLD_DAT_BEG=&FLD_DAT_END=&v_pagenum=' + unicode(PageNum) + '&v_seldatabase=0&v_LogicSrch=0'
+API = '/cgi-bin/IlaswebBib?v_index=TITLE&v_value=' + TITLE + '&FLD_DAT_BEG=&FLD_DAT_END=&v_pagenum=' + unicode(
+    PageNum) + '&v_seldatabase=0&v_LogicSrch=0'
 
+search_book_html = urllib2.urlopen(LIB_HOST + API)
+search_book_Obj = BeautifulSoup(search_book_html, "html.parser", from_encoding="GB18030")
 
-new_book_html = urllib2.urlopen(LIB_HOST+API)
-new_book_Obj = BeautifulSoup(new_book_html,"html.parser",from_encoding="GB18030")
-
-for tr in new_book_Obj.find("table",{"bgcolor":"#008080"}).tr.next_siblings:
-	try:
-		td= tr.find_all("td")
-		print   u"题名:" + td[0].get_text() \
-					+ u" 作者:" + td[1].get_text() \
-					+ u" 出版社:" + td[2].get_text() \
-					+ u" 页码:" + td[3].get_text() \
-					+ u" 价格:" + td[4].get_text() \
-					+ u" 索引号:" + td[5].get_text() \
-					+ u" Book_Link: " + td[6].a.attrs['href']
-	except: 
-		pass
+for tr in search_book_Obj.find("table", {"bgcolor": "#008080"}).tr.next_siblings:
+    try:
+        td = tr.find_all("td")
+        print u"题名:" + td[0].get_text() \
+                + u" 作者:" + td[1].get_text() \
+                + u" 出版社:" + td[2].get_text() \
+                + u" 页码:" + td[3].get_text() \
+                + u" 价格:" + td[4].get_text() \
+                + u" 索引号:" + td[5].get_text() \
+                + u" Book_Link: " + td[6].a.attrs['href']
+    except:
+        pass
