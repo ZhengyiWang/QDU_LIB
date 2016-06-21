@@ -66,11 +66,11 @@ h6, .h6 {
 
 /*Search Bar*/
 .search{
-    height: 20px;
+    height: 0px;
     background-color: #f6f6f1;
 }
 .index-name{
-    color: gray;
+    color: #5a4129;
     font-size: 32px;
     font-family:sans-serif;
     bottom:26px;
@@ -98,7 +98,12 @@ h6, .h6 {
 .high-line{
     margin-top: 4px;
 }
-
+.thumb{
+    padding-top: 1px;
+}
+.thumbnail img{ 
+    min-height: 178px; 
+}
 /* Active state gets a caret at the bottom */
 .index-nav .active {
   color: #fff;
