@@ -2,19 +2,80 @@
 <html lang="zh-CN">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
     <title>青岛大学-图书馆</title>
     <!--Boostrap-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/book.css" rel="stylesheet">
 </head>
-    
 
 <body>
 
-<div class="container">
-<h1>Hello World!</h1>
+<div class="index-nav">
+    <div class="container">
+        <nav class="nav">
+            <a class="book-nav-item active" href="#">首页</a>
+            <a class="book-nav-item" href="#">购书单</a>
+            <a class="book-nav-item" href="#">新书速递</a>
+            <a class="book-nav-item" href="#">图书分类</a>
+            <a class="book-nav-item" href="#">关于我们</a>
+            <a class="book-nav-item signup pull-right" href="#">注册</a>
+            <a class="book-nav-item login pull-right" href="#">登录</a>
+        </nav>
+    </div>
 </div>
+    
+<div class="jumbotron search">
+    <div class="container">
+        <div class="row">
+            <div class="index-name col-md-2">
+              青大图书
+            </div>
+            <div class="search-bar col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="书名、作者、ISBN">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+            <div class="new_book">
+                <span class="new_book_text">新书速递</span>
+                <span class="link-more">
+                    <a class="" href="">更多»</a>
+                </span>
+                <hr class="high-line">
+            </div>
+            
+          <p class="pull-right visible-xs">
+              ssss
+          </p>
+        </div><!--/.col-xs-12.col-sm-9-->
 
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+
+    
 <script src="js/jquery-3.0.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
