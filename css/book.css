@@ -2,9 +2,9 @@
  * Globals
  */
 
-body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
+body{
+    font: 14px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
 }
 
 h1, .h1,
@@ -80,6 +80,13 @@ h6, .h6 {
     bottom: 20px;
 }
 
+.search_botton_background{
+    background-color: #A2A097;
+}
+
+.search_botton{
+    color: white;
+}
 
 /*New Book*/
 .new_book_text{
@@ -97,6 +104,7 @@ h6, .h6 {
 }
 .high-line{
     margin-top: 4px;
+    margin-bottom: 8px;
 }
 .thumb{
     padding-top: 1px;
@@ -104,6 +112,25 @@ h6, .h6 {
 .thumbnail img{ 
     min-height: 178px; 
 }
+.cover{
+    margin-bottom: 2px;
+}
+.book_info {
+    padding: 0px 4px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.title{
+    font-size: 13px;
+    margin-bottom: 1px;
+}
+.author {
+    color: #333;
+    white-space: nowrap;
+    width: 102px;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
 /* Active state gets a caret at the bottom */
 .index-nav .active {
   color: #fff;
@@ -121,3 +148,19 @@ h6, .h6 {
   border-bottom: 5px solid;
   border-left: 5px solid transparent;
 }
+
+/*Footer*/
+#footer {
+    color: #999;
+    padding: 6px 0;
+    margin-top: 40px;
+    overflow: hidden;
+    zoom: 1;
+    font-size: 12px;
+    border-top: 1px dashed #ddd;
+}
+
+.fright {
+    float: right;
+}
+
