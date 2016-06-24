@@ -92,7 +92,6 @@ h6, .h6 {
 .new_book_text{
     font-size: 18px;
     font-weight: bold;
-    padding-bottom: 3px;
     margin-bottom: 16px;
     font-weight: normal;
     font-stretch: normal;
@@ -101,6 +100,10 @@ h6, .h6 {
 .link-more{
     font-size: 12px;
     padding-left: 10px;
+}
+.refresh{
+    margin-top:10px;
+    float: right;
 }
 .high-line{
     margin-top: 4px;
@@ -121,7 +124,12 @@ h6, .h6 {
 }
 .title{
     font-size: 13px;
+    white-space: nowrap;
+    width: 126px;
     margin-bottom: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    course:hand;
 }
 .author {
     color: #333;
@@ -129,6 +137,12 @@ h6, .h6 {
     width: 102px;
     font-size: 12px;
     margin-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    course:hand;
+}
+.book-item{
+    height: 240px;
 }
 
 /* Active state gets a caret at the bottom */

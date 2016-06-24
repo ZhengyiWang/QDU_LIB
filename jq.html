@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>青岛大学-图书馆</title>
+    <!--Boostrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/book.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" >
+</head>
+<body> 
+    <div id="info">
+    <p class="title">'</p>
+    </div>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript">
+    $("#info").html("");
+    $.getJSON("http://lib.qducc.com/library/lib?book_detail=true&is_random=true&items=1&is_json=true",function(book){
+    $.each(book, function(i, item) {
+        alert(item.title);
+    });
+    });            
+    </script>
+</body>
