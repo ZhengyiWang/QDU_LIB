@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>青岛大学-图书馆</title>
+    <!--Boostrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/book.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" >
+</head>
+
+<body>
+
+<div class="index-nav">
+    <div class="container">
+        <nav class="nav">
+            <a class="book-nav-item" href="index.html">首页</a>
+            <a class="book-nav-item" href="#">购书单</a>
+            <a class="book-nav-item active" href="new_book.html">新书速递</a>
+            <a class="book-nav-item" href="#">图书分类</a>
+            <a class="book-nav-item" href="#">关于我们</a>
+            <a class="book-nav-item signup pull-right" href="#">注册</a>
+            <a class="book-nav-item login pull-right" href="#">登录</a>
+        </nav>
+    </div>
+</div>
+<div class="jumbotron search">
+    <div class="container">
+        <div class="row">
+            <div class="index-name col-xs-12 col-md-2">
+                青大图书
+            </div>
+            <div class="search-bar col-xs-12 col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="书名、作者、ISBN">
+                    <span class="input-group-addon search_botton_background">
+                        <span class="glyphicon glyphicon-search search_botton"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="container">
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-12">
+            <table class="table table-striped new_book_list">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr></tr>
+<!--                    <div class="refresh"></div>-->
+                </tbody>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                  </div>
+                </div>
+            </table>
+
+
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+
+<div id="footer" class="">
+    
+    <span id="icp" class="fleft gray-link">
+        © 2015－2016 qducc.com, all rights reserved 青大CC-小字辈
+    </span>
+
+    <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+    <span class="fright">
+        <a href="http://api.myanthem.cn/download_page">青大CC</a>
+        ·<a href="http://www.qducc.com/">关于CC</a>
+        · <a href="http://www.qducc.com/#contact">加入我们</a>
+        · <a href="http://www.qducc.com/#contact">联系我们</a>
+    </span>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+                var color = ['active', 'success', 'warning', 'danger', 'info'];
+                $(".refresh").attr("class","fa fa-refresh fa-spin fa-1x fa-fw refresh");    
+                $.getJSON("http://127.0.0.1:8000/library/lib?disp_new_book=true&date=2016.01.04.&is_json=true",function(book){
+                $.each(book.contents, function(i, item) {
+                    var count = book.count;
+                    var n = Math.floor(Math.random() * color.length + 1)-1;   //random
+                    $(".new_book_list > tbody tr:last")
+                        .after(
+                        '<tr class=\"' +color[i%5] +  '\"><th scope="row">'+ (i + 1) +'</th><td class="book_title">'+  item.title +'</td><td class="book author">' + item.author + '</td></tr>'
+                    )
+                    var percent = parseInt( (i + 1) / count * 100 );
+                    $(".progress-bar").attr("style",'width:'+ percent +'%');
+                    $(".progress-bar").html(percent+"%");
+                    setTimeout(function(){
+                        myfunction($this)
+                    }, (i + 1) * 200);
+                });
+                });
+    </script>
+</div>
+        
+</body>
+    
+</html>
