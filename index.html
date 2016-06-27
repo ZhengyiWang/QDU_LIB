@@ -20,8 +20,7 @@
             <a class="book-nav-item" href="new_book.html">新书速递</a>
             <a class="book-nav-item" href="#">图书分类</a>
             <a class="book-nav-item" href="about.html" data-toggle="modal" data-target="#aboutus">关于我们</a>
-            <a class="book-nav-item signup pull-right" href="#">注册</a>
-            <a class="book-nav-item login pull-right" href="#">登录</a>
+            <a class="book-nav-item signup login pull-right" href="user.html">登录/注册</a>
         </nav>
     </div>
 </div>
@@ -318,59 +317,59 @@
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
 
-<div id="footer" class="">
-    <span id="icp" class="fleft gray-link">
-        © 2015－2016 qducc.com, all rights reserved 青大CC-小字辈
-    </span>
+    <div id="footer" class="">
+        <span id="icp" class="fleft gray-link">
+            © 2015－2016 qducc.com, all rights reserved 青大CC-小字辈
+        </span>
 
-    <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+        <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
 
-    <span class="fright">
-        <a href="http://api.myanthem.cn/download_page">青大CC</a>
-        ·<a href="http://www.qducc.com/">关于CC</a>
-        · <a href="http://www.qducc.com/#contact">加入我们</a>
-        · <a href="http://www.qducc.com/#contact">联系我们</a>
-    </span>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        function refresh_book(times){
-                $(".refresh").attr("class","fa fa-refresh fa-spin fa-1x fa-fw refresh");    
-                $.getJSON("http://127.0.0.1:8000/library/lib?book_detail=true&is_random=true&items=8&is_json=true",function(book){
-                $.each(book, function(i, item) {
-                    
-                    if (item.title != ''){
-                        $("." + i + ".title>a").html(item.title);
-                    }
-                    else{
-                        $("." + i + ".title>a").html("无标题");
-                    }
+        <span class="fright">
+            <a href="http://api.myanthem.cn/download_page">青大CC</a>
+            ·<a href="http://www.qducc.com/">关于CC</a>
+            · <a href="http://www.qducc.com/#contact">加入我们</a>
+            · <a href="http://www.qducc.com/#contact">联系我们</a>
+        </span>
+        <script src="js/jquery-3.0.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function refresh_book(times){
+                    $(".refresh").attr("class","fa fa-refresh fa-spin fa-1x fa-fw refresh");    
+                    $.getJSON("http://127.0.0.1:8000/library/lib?book_detail=true&is_random=true&items=8&is_json=true",function(book){
+                    $.each(book, function(i, item) {
 
-                    try{
-                        $("." + i + ".title>a").attr("href","book_detail.html?isbn=" + item.isbn13);
-                        $("." + i + ".cover").attr("src", item.douban.image);
-                        $("." + i + ".alt").attr("href", "book_detail.html?isbn=" + item.isbn13);
-                    }
-                    catch(err){
-                        $("." + i + ".cover").attr("src", "      http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif");            
-                        $("." + i + ".alt").attr("href", "");
+                        if (item.title != ''){
+                            $("." + i + ".title>a").html(item.title);
+                        }
+                        else{
+                            $("." + i + ".title>a").html("无标题");
+                        }
 
-                    }
+                        try{
+                            $("." + i + ".title>a").attr("href","book_detail.html?isbn=" + item.isbn13);
+                            $("." + i + ".cover").attr("src", item.douban.image);
+                            $("." + i + ".alt").attr("href", "book_detail.html?isbn=" + item.isbn13);
+                        }
+                        catch(err){
+                            $("." + i + ".cover").attr("src", "      http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif");            
+                            $("." + i + ".alt").attr("href", "");
 
-                    if (item.author != ''){
-                        $("." + i + ".author").html(item.author);
-                    }
-                    else{
-                        $("." + i + ".author").html("无作者");
-                    }
-                });
-                $(".refresh").attr("class","fa fa-refresh fa-1x fa-fw refresh");          
-                });
-        }
-    </script>
-    <script>refresh_book(1)</script>
+                        }
+
+                        if (item.author != ''){
+                            $("." + i + ".author").html(item.author);
+                        }
+                        else{
+                            $("." + i + ".author").html("无作者");
+                        }
+                    });
+                    $(".refresh").attr("class","fa fa-refresh fa-1x fa-fw refresh");          
+                    });
+            }
+        </script>
+        <script>refresh_book(1)</script>
+    </div>
 </div>
-        
 </body>
     
 </html>

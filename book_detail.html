@@ -20,8 +20,7 @@
             <a class="book-nav-item active" href="new_book.html">新书速递</a>
             <a class="book-nav-item" href="#">图书分类</a>
             <a class="book-nav-item" href="about.html" data-toggle="modal" data-target="#aboutus">关于我们</a>
-            <a class="book-nav-item signup pull-right" href="#">注册</a>
-            <a class="book-nav-item login pull-right" href="#">登录</a>
+            <a class="book-nav-item signup login pull-right" href="user.html">登录/注册</a>
         </nav>
     </div>
 </div>
@@ -147,97 +146,98 @@
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
             
-<div id="footer" class="">
-    
-    <span id="icp" class="fleft gray-link">
-        © 2015－2016 qducc.com, all rights reserved 青大CC-小字辈
-    </span>
+    <div id="footer" class="">
 
-    <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+        <span id="icp" class="fleft gray-link">
+            © 2015－2016 qducc.com, all rights reserved 青大CC-小字辈
+        </span>
 
-    <span class="fright">
-        <a href="http://api.myanthem.cn/download_page">青大CC</a>
-        ·<a href="http://www.qducc.com/">关于CC</a>
-        · <a href="http://www.qducc.com/#contact">加入我们</a>
-        · <a href="http://www.qducc.com/#contact">联系我们</a>
-    </span>
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-    </script>
-    <script type="text/javascript">
-            var isbn = getParameterByName('isbn');
-            $.getJSON("https://api.douban.com/v2/book/isbn/" + isbn + "?alt=xd&callback=?",function(book){
-                    try{
-                        $(".info_book_title").html(book.title);
-                    }
-                    catch(err){
-                        $(".info_book_title").html("无标题");
-                    }                
-                    try{
-                        $(".info_book_cover > img").attr("src", book.image);
-                        $(".info_book_cover > img").attr("href", book.alt);
-                    }
-                    catch(err){
-                        $("." + i + ".cover").attr("src", "      http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif");            
-                    }
-                    try{
-                        $('.info_book_author').html(book.author);
-                    }
-                    catch(err){
-                        $('.info_book_author').html("无作者");
-                    }
-                    try{
-                        $('.info_book_press').html(book.publisher);
-                    }
-                    catch(err){
-                        $('.info_book_press').html("无出版社");
-                    }
-                    try{
-                        $('.info_book_price').html(book.price);
-                    }
-                    catch(err){
-                        $('.info_book_price').html("不详");
-                    }
-                    try{
-                        $('.info_book_page').html(book.pages);
-                    }
-                    catch(err){
-                        $('.info_book_page').html("不详");
-                    }
-                    try{
-                        $('.info_book_isbn').html(book.isbn13);
-                    }
-                    catch(err){
-                        $('.info_book_isbn').html("不详");
-                    }
-                    try{
-                        $('.rating-num').html(book.rating.average);
-                    }
-                    catch(err){
-                        $('.rating-num').html("无评分");
-                    }
-                    try{
-                        $('.info_book_pubdate').html(book.pubdate);
-                    }
-                    catch(err){
-                        $('.info_book_pubdate').html("不详");
-                    }
+        <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
 
-            });
-    </script>
-  
+        <span class="fright">
+            <a href="http://api.myanthem.cn/download_page">青大CC</a>
+            ·<a href="http://www.qducc.com/">关于CC</a>
+            · <a href="http://www.qducc.com/#contact">加入我们</a>
+            · <a href="http://www.qducc.com/#contact">联系我们</a>
+        </span>
+        <script src="js/jquery-3.0.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+        </script>
+        <script type="text/javascript">
+                var isbn = getParameterByName('isbn');
+                $.getJSON("https://api.douban.com/v2/book/isbn/" + isbn + "?alt=xd&callback=?",function(book){
+                        try{
+                            $(".info_book_title").html(book.title);
+                        }
+                        catch(err){
+                            $(".info_book_title").html("无标题");
+                        }                
+                        try{
+                            $(".info_book_cover > img").attr("src", book.image);
+                            $(".info_book_cover > img").attr("href", book.alt);
+                        }
+                        catch(err){
+                            $("." + i + ".cover").attr("src", "      http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif");            
+                        }
+                        try{
+                            $('.info_book_author').html(book.author);
+                        }
+                        catch(err){
+                            $('.info_book_author').html("无作者");
+                        }
+                        try{
+                            $('.info_book_press').html(book.publisher);
+                        }
+                        catch(err){
+                            $('.info_book_press').html("无出版社");
+                        }
+                        try{
+                            $('.info_book_price').html(book.price);
+                        }
+                        catch(err){
+                            $('.info_book_price').html("不详");
+                        }
+                        try{
+                            $('.info_book_page').html(book.pages);
+                        }
+                        catch(err){
+                            $('.info_book_page').html("不详");
+                        }
+                        try{
+                            $('.info_book_isbn').html(book.isbn13);
+                        }
+                        catch(err){
+                            $('.info_book_isbn').html("不详");
+                        }
+                        try{
+                            $('.rating-num').html(book.rating.average);
+                        }
+                        catch(err){
+                            $('.rating-num').html("无评分");
+                        }
+                        try{
+                            $('.info_book_pubdate').html(book.pubdate);
+                        }
+                        catch(err){
+                            $('.info_book_pubdate').html("不详");
+                        }
+
+                });
+        </script>
+
+        </div>
 </div>
-        
+  
 </body>
     
 </html>
