@@ -229,6 +229,59 @@ h6, .h6 {
     top: 8px;
     right: 5px;
 }
+
+/*book_detail*/
+.info_book_title{
+    word-wrap: break-word;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #494949;
+    margin: 0;
+    padding: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+
+#interest_sectl{
+    float: right;
+    width: 155px;
+    margin: 2px 0 0 0;
+    padding: 0 0 0 15px;
+
+    border-left: 1px solid #eaeaea;
+    color: #9b9b9b;
+}
+.book_detail_content > div{
+    float:left
+}
+.info_book_cover{
+    margin: 0px 12px 0 0;
+    max-width: 155px;
+    overflow: visible;
+}
+.info_book{
+    max-width: 248px;
+    word-wrap: break-word;
+}
+.pl {
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+}
+.pll {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 150%;
+}
+.rating-num{
+    color: #494949;
+    padding: 0;
+    min-width: 30%;
+    font-size: 28px;
+}
+.plll{
+    color: #007722;
+}
 /*Footer*/
 #footer {
     color: #999;

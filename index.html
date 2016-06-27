@@ -42,8 +42,8 @@
         </div>
     </div>
 </div>
-    <!--about us-->
     <div class="container">
+        <!--about us-->
         <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="LoginLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -347,9 +347,9 @@
                     }
 
                     try{
-                        $("." + i + ".title>a").attr("href",item.douban.alt);
+                        $("." + i + ".title>a").attr("href","book_detail.html?isbn=" + item.isbn13);
                         $("." + i + ".cover").attr("src", item.douban.image);
-                        $("." + i + ".alt").attr("href", item.douban.alt);
+                        $("." + i + ".alt").attr("href", "book_detail.html?isbn=" + item.isbn13);
                     }
                     catch(err){
                         $("." + i + ".cover").attr("src", "      http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif");            
