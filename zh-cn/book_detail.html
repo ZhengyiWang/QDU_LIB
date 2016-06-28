@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <title>青岛大学-图书馆</title>
     <!--Boostrap-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/book.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet" >
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/book.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" >
 </head>
 
 <body>
@@ -20,6 +20,7 @@
             <a class="book-nav-item active" href="new_book.html">新书速递</a>
             <a class="book-nav-item" href="#">图书分类</a>
             <a class="book-nav-item" href="about.html" data-toggle="modal" data-target="#aboutus">关于我们</a>
+            <a class="book-nav-item pull-right EN">English</a>
             <a class="book-nav-item signup login pull-right" href="user.html">登录/注册</a>
         </nav>
     </div>
@@ -140,12 +141,29 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
         </div><!--/.sidebar-offcanvas-->
       </div><!--/row-->
-            
+    <div class="button-group" style="margin-top:10px;">
+        <button type="button" style="margin-left:0px;" class="btn btn-default btn-sm ">想读</button>
+        <button type="button" style="margin-left:0px;" class="btn btn-default btn-sm ">在读</button>
+        <button type="button" style="margin-left:0px;" class="btn btn-default btn-sm ">读过</button>
+        <button type="button" style="margin-left:0px;" class="btn btn-danger btn-sm add-shop-car">加入购物车</button>
+
+    </div>
+    <div class="summary-content">
+        <h2 class="summary-text">内容简介  · · · · · ·</h2>
+        <p class="summary"></p>
+    </div>
+        
+    <div class="catalog-content">
+        <h2 class="catalog-text">目录  · · · · · ·</h2>
+        <p class="catalog"></p>
+    </div>
+        
     <div id="footer" class="">
 
         <span id="icp" class="fleft gray-link">
@@ -160,8 +178,8 @@
             · <a href="http://www.qducc.com/#contact">加入我们</a>
             · <a href="http://www.qducc.com/#contact">联系我们</a>
         </span>
-        <script src="js/jquery-3.0.0.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="../js/jquery-3.0.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
         <script>
             function getParameterByName(name, url) {
                 if (!url) url = window.location.href;
@@ -182,6 +200,11 @@
                         catch(err){
                             $(".info_book_title").html("无标题");
                         }                
+                    
+                    
+                        var summary =book.summary.replace(/\n/g, "<br />");
+                        var catalog =book.catalog.replace(/\n/g, "<br />");
+                        
                         try{
                             $(".info_book_cover > img").attr("src", book.image);
                             $(".info_book_cover > img").attr("href", book.alt);
@@ -231,7 +254,24 @@
                         catch(err){
                             $('.info_book_pubdate').html("不详");
                         }
-
+                        try{
+                            $('.summary').html(summary);
+                        }
+                        catch(err){
+                            $('.summary').html("不详");
+                        }
+                        try{
+                            $('.catalog').html(catalog);
+                        }
+                        catch(err){
+                            $('.catalog').html("不详");
+                        }       
+                        $('.add-shop-car').click(function(){
+                            window.location.href = 'pay.html?book_title=' + book.title + '&author=' + book.author + '&price=' + book.price;
+                        });
+                        $('.EN').click(function(){
+                            window.location.href = '../en-us/book_detail.html?isbn=' + isbn;
+                        });
                 });
         </script>
 
