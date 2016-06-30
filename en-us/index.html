@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>青岛大学-图书馆</title>
+    <!--Boostrap-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/book.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" >
+</head>
+
+<body>
+
+<div class="index-nav">
+    <div class="container">
+        <nav class="nav">
+            <a class="book-nav-item active" href="index.html">Home Page</a>
+            <a class="book-nav-item" href="#">Cart</a>
+            <a class="book-nav-item" href="new_book.html">New Release</a>
+            <a class="book-nav-item" href="#">Subject</a>
+            <a class="book-nav-item" href="about.html" data-toggle="modal" data-target="#aboutus">About us</a>
+            <a class="book-nav-item pull-right EN" href="../zh-cn/index.html">中文</a>
+            <a class="book-nav-item signup login pull-right" href="user.html">Sign in/Creat account</a>
+        </nav>
+    </div>
+</div>
+<div class="jumbotron search">
+    <div class="container">
+        <div class="row">
+            <div class="index-name col-xs-4 col-md-2">
+                青大图书
+            </div>
+            <div class="search-bar col-xs-8 col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Title、Author、ISBN(s)">
+                    <span class="input-group-addon search_botton_background">
+                        <span class="glyphicon glyphicon-search search_botton"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="container">
+        <!--about us-->
+        <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="LoginLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="LoginLabel">About us</h4>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <p align="center">
+                    走过人来人往<br/>
+                    不喜欢也得欣赏<br/>
+                    我是沉默的存在<br/><br/>
+
+                    不当你世界 只作你肩膀<br/>
+                    我们静静分享<br/>
+                    此刻难得的坦白<br/>
+                    虽是无声地交谈<br/>
+                    都感觉幸福 感觉不孤单<br/><br/>
+
+                    拒绝成长到成长<br/>
+                    变成想要的模样<br/>
+                    在举手投降以前<br/>
+                    让我再陪你一段<br/>
+                    陪你把沿路感想活出答案<br/>
+                    陪你把独自孤单变成勇敢<br/><br/>
+
+                    一次次失去又重来 我不离开<br/>
+                    陪伴 是最长情的告白<br/>
+                    陪你把想念的酸 拥抱成温暖<br/>
+                    陪你把彷徨 写出情节来<br/>
+                    未来多漫长 再漫长 还有期待<br/>
+                    陪伴你 一直到 故事给说完<br/><br/>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;   ----《陪你度过漫长岁月》
+                    </p>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-8">
+            <div class="new_book">
+                <span class="new_book_text">New Release</span>
+                <span class="link-more">
+                    <a class="" href="">more»</a>
+                </span>
+                <i class="fa fa-refresh fa-1x fa-fw refresh" onclick="refresh_book()"></i>
+                    <!-- Todo click to spin -->
+                <hr class="high-line">
+                <div class="thumb row">
+                    <div class="col-xs-6 col-md-3 book-item">
+                        <div class="cover thumbnail">
+                            <a href="" class="book1 alt" target="_blank">
+                                <img class="book1 cover" src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" >
+                            </a>
+                        </div>
+                        <div class="book_info">
+                            <div class="book1 title"><a class="" href=""><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></a></div>
+                            <div class="book1 author"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3 book-item">
+                        <div class="cover thumbnail">
+                            <a href="" class="book2 alt" target="_blank">
+                                <img class="book2 cover" src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" >
+                            </a>
+                        </div>
+                        <div class="book_info">
+                            <div class="book2 title"><a class="" href="" ><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></a></div>
+                            <div class="book2 author"></div>
+                        </div>
+                    </div>                    
+                    <div class="col-xs-6 col-md-3 book-item">
+                        <div class="cover thumbnail">
+                            <a href="" class="book3 alt" target="_blank">
+                                <img class="book3 cover" src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" >
+                            </a>
+                        </div>
+                        <div class="book_info">
+                            <div class="book3 title"><a class="" href="" ><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></a></div>
+                            <div class="book3 author"></div>
+                        </div>
+                    </div>                
+                    <div class="col-xs-6 col-md-3 book-item">
+                        <div class="cover thumbnail">
+                            <a href="" class="book4 alt" target="_blank">
+                                <img class="book4 cover" src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" >
+                            </a>
+                        </div>
+                        <div class="book_info">
+                            <div class="book4 title"><a class="" href="" ><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></a></div>
+                            <div class="book4 author"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3 book-item">
+                        <div class="cover thumbnail">
+                            <a href="" class="book5 alt" target="_blank">
+                                <img class="book5 cover" src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" >
+                            </a>
+                        </div>
+                        <div class="book_info">
+                            <div class="book5 title"><a class="" href="" ><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></a></div>
+                            <div class="book5 author"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3 book-item">
+                        <div class="cover thumbnail">
+                            <a href="" class="book6 alt" target="_blank">
+                                <img class="book6 cover" src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" >
+                            </a>
+                        </div>
+                        <div class="book_info">
+                            <div class="book6 title"><a class="" href="" ><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></a></div>
+                            <div class="book6 author"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3 book-item">
+                        <div class="cover thumbnail">
+                            <a href="" class="book7 alt" target="_blank">
+                                <img class="book7 cover" src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" >
+                            </a>
+                        </div>
+                        <div class="book_info">
+                            <div class="book7 title"><a class="" href="" ><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></a></div>
+                            <div class="book7 author"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-3 book-item">
+                        <div class="cover thumbnail">
+                            <a href="" class="book8 alt" target="_blank">
+                                <img class="book8 cover" src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" >
+                            </a>
+                        </div>
+                        <div class="book_info">
+                            <div class="book8 title"><a class="" href="" ><i class="fa fa-spinner fa-spin fa-1x fa-fw"></i></a></div>
+                            <div class="book8 author"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div><!--/.col-xs-12.col-sm-9-->
+          
+        <!--侧边栏-->
+        <div class="col-xs-12 col-sm-4 sidebar-offcanvas" id="sidebar">
+            <div class="tag">
+                <span class="tag_text">Hot Tags</span>
+                <span class="link-more">
+                    <a class="" href="">All Tags»</a>
+                </span>
+                <hr class="high-line">
+                <div class="all-tag">
+                    <div class="tag-1">
+                        <span class="label label-info book-label">Novels</span>
+                        <span class="label label-default book-label">Essay</span>
+                        <span class="label label-success book-label">Japanese Literature</span>
+                        <span class="label label-warning book-label">Prose</span>
+                        <span class="label label-danger book-label">Children's Books</span>
+                        <span class="label label-primary book-label">Poem</span>
+                        <span class="label label-warning book-label">Masterpiece</span>
+                        <span class="label label-success book-label">RTHK</span>
+                        <span class="label label-info book-label">History</span>
+                        <span class="label label-default book-label">Philosophy</span>
+                        <span class="label label-success book-label">Biography</span>
+                        <span class="label label-warning book-label">Design</span>
+                        <span class="label label-danger book-label">Architecture</span>
+                        <span class="label label-primary book-label">Film</span>
+                        <span class="label label-warning book-label">Memoirs</span>
+                        <span class="label label-success book-label">Music</span>
+                        <span class="label label-default laber-more book-label">More》</span>
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="ranking-list">
+                <div class="ranking-text">
+                    <span class="ranking">Ranking</span>
+                    <hr class="high-line">
+                </div>
+                <div class="ranking-info">
+                <ul class="list list-ranking">
+                    <li class="item">
+                        <span class="rank-num">1.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/26670709/" class="name" target="_blank">世界地图：跟爸爸一起去旅行</a>
+                            <div class="author">[英] 尼克·柯雷恩 著/[英] 大卫·迪恩 绘</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">2.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/26340138/" class="name" target="_blank">岛上书店</a>
+                            <div class="author">[美] 加布瑞埃拉·泽文</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">3.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/26429208/" class="name" target="_blank">猜猜我有多爱你</a>
+                            <div class="author">[爱尔兰]山姆·麦克布雷尼/文/[英]安妮塔·婕朗/图</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">4.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/1770782/" class="name" target="_blank">追风筝的人</a>
+                            <div class="author">[美] 卡勒德·胡赛尼</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">5.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/26356948/" class="name" target="_blank">摆渡人</a>
+                            <div class="author">[英]克莱儿·麦克福尔</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">6.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/24745649/" class="name" target="_blank">围城</a>
+                            <div class="author">钱钟书</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">7.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/26768309/" class="name" target="_blank">查令十字街84号</a>
+                            <div class="author">[美] 海莲·汉芙</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">8.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/26761696/" class="name" target="_blank">精进</a>
+                            <div class="author">采铜</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">9.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/25929658/" class="name" target="_blank">不会说话你就输了</a>
+                            <div class="author">李国辉</div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <span class="rank-num">10.</span>
+                        <div class="book-info">
+                            <a href="https://book.douban.com/subject/10786473/" class="name" target="_blank">自控力</a>
+                            <div class="author">[美]  凯利·麦格尼格尔</div>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+
+    <div id="footer" class="">
+        <span id="icp" class="fleft gray-link">
+             © 2015－2016 David,Mark,Vinson all rights reserved Lehr
+        </span>
+
+        <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+        <script src="../js/jquery-3.0.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function refresh_book(times){
+                    $(".refresh").attr("class","fa fa-refresh fa-spin fa-1x fa-fw refresh");    
+                    $.getJSON("http://127.0.0.1:8000/library/lib?book_detail=true&is_random=true&items=8&is_json=true",function(book){
+                    $.each(book, function(i, item) {
+
+                        if (item.title != ''){
+                            $("." + i + ".title>a").html(item.title);
+                        }
+                        else{
+                            $("." + i + ".title>a").html("无标题");
+                        }
+
+                        try{
+                            $("." + i + ".title>a").attr("href","book_detail.html?isbn=" + item.isbn13);
+                            $("." + i + ".cover").attr("src", item.douban.image);
+                            $("." + i + ".alt").attr("href", "book_detail.html?isbn=" + item.isbn13);
+                        }
+                        catch(err){
+                            $("." + i + ".cover").attr("src", "      http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif");            
+                            $("." + i + ".alt").attr("href", "");
+
+                        }
+
+                        if (item.author != ''){
+                            $("." + i + ".author").html(item.author);
+                        }
+                        else{
+                            $("." + i + ".author").html("无作者");
+                        }
+                    });
+                    $(".refresh").attr("class","fa fa-refresh fa-1x fa-fw refresh");          
+                    });
+            }
+        </script>
+        <script>refresh_book(1)</script>
+    </div>
+</div>
+</body>
+    
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>book_detail</title>
+    <!--Boostrap-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/book.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" >
+</head>
+
+<body>
+
+<div class="index-nav">
+    <div class="container">
+        <nav class="nav">
+            <a class="book-nav-item" href="index.html">Home Page</a>
+            <a class="book-nav-item" href="#">Cart</a>
+            <a class="book-nav-item active" href="new_book.html">New Release</a>
+            <a class="book-nav-item" href="#">Subject</a>
+            <a class="book-nav-item" href="about.html" data-toggle="modal" data-target="#aboutus">About us</a>
+            <a class="book-nav-item pull-right CN">中文</a>
+            <a class="book-nav-item signup login pull-right" href="user.html">Sign in/Creat account</a>
+        </nav>
+    </div>
+</div>
+<div class="jumbotron search">
+    <div class="container">
+        <div class="row">
+            <div class="index-name col-xs-4 col-md-2">
+                青大图书
+            </div>
+            <div class="search-bar col-xs-8 col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Title、Author、ISBN(s)">
+                    <span class="input-group-addon search_botton_background">
+                        <span class="glyphicon glyphicon-search search_botton"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="container">
+    <!--about us-->
+        <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="LoginLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="LoginLabel">About us</h4>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <p align="center">
+                    走过人来人往<br/>
+                    不喜欢也得欣赏<br/>
+                    我是沉默的存在<br/><br/>
+
+                    不当你世界 只作你肩膀<br/>
+                    我们静静分享<br/>
+                    此刻难得的坦白<br/>
+                    虽是无声地交谈<br/>
+                    都感觉幸福 感觉不孤单<br/><br/>
+
+                    拒绝成长到成长<br/>
+                    变成想要的模样<br/>
+                    在举手投降以前<br/>
+                    让我再陪你一段<br/>
+                    陪你把沿路感想活出答案<br/>
+                    陪你把独自孤单变成勇敢<br/><br/>
+
+                    一次次失去又重来 我不离开<br/>
+                    陪伴 是最长情的告白<br/>
+                    陪你把想念的酸 拥抱成温暖<br/>
+                    陪你把彷徨 写出情节来<br/>
+                    未来多漫长 再漫长 还有期待<br/>
+                    陪伴你 一直到 故事给说完<br/><br/>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;   ----《陪你度过漫长岁月》
+                    </p>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-12">
+            <h1 class="info_book_title"></h1>
+            <div class="article">
+                <div class="indent">
+                    <div class="book_detail_content">
+                        <div class="info_book_cover">
+                            <img  src="http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif" alt="">
+                        </div>
+                        <div class="info_book">
+                            <span>
+                                <span class="pl">Author:</span>
+                                <span class="info_book_author pll"></span>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="pl">Publisher:</span>
+                                <span class="info_book_press pll"></span>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="pl">Pages:</span>
+                                <span class="info_book_page pll"></span>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="pl">Publication Year:</span>
+                                <span class="info_book_pubdate pll"></span>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="pl">Price:</span>
+                                <span class="info_book_price pll"></span>
+                            </span>
+                            <br>
+                            <span>
+                                <span class="pl">ISBN:</span>
+                                <span class="info_book_isbn pll"></span>
+                            </span>
+                        </div>
+        
+                        <div id="interest_sectl">
+                            <div class="grade_box">
+                                <div class="rating_logo">DouBan Grade</div>
+                                <div class="rating_self">
+                                    <strong class="rating-num"></strong>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+    <div class="button-group" style="margin-top:10px;">
+        <button type="button" style="margin-left:0px;" class="btn btn-default btn-sm ">Miss</button>
+        <button type="button" style="margin-left:0px;" class="btn btn-default btn-sm ">Reading</button>
+        <button type="button" style="margin-left:0px;" class="btn btn-default btn-sm ">Read</button>
+        <button type="button" style="margin-left:0px;" class="btn btn-danger btn-sm add-shop-car">Add to Cart</button>
+
+    </div>
+    <div class="summary-content">
+        <h2 class="summary-text">Introduction  · · · · · ·</h2>
+        <p class="summary"></p>
+    </div>
+        
+    <div class="catalog-content">
+        <h2 class="catalog-text">Category  · · · · · ·</h2>
+        <p class="catalog"></p>
+    </div>
+        
+    <div id="footer" class="">
+
+        <span id="icp" class="fleft gray-link">
+            © 2015－2016 David,Mark,Vinson all rights reserved Lehr        </span>
+
+        <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+
+        <script src="../js/jquery-3.0.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+        </script>
+        <script type="text/javascript">
+                var isbn = getParameterByName('isbn');
+                $.getJSON("https://api.douban.com/v2/book/isbn/" + isbn + "?alt=xd&callback=?",function(book){
+                        try{
+                            $(".info_book_title").html(book.title);
+                        }
+                        catch(err){
+                            $(".info_book_title").html("No title");
+                        }                
+                    
+                    
+                        var summary =book.summary.replace(/\n/g, "<br />");
+                        var catalog =book.catalog.replace(/\n/g, "<br />");
+                        
+                        try{
+                            $(".info_book_cover > img").attr("src", book.image);
+                            $(".info_book_cover > img").attr("href", book.alt);
+                        }
+                        catch(err){
+                            $("." + i + ".cover").attr("src", "      http://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-medium.gif");            
+                        }
+                        try{
+                            $('.info_book_author').html(book.author);
+                        }
+                        catch(err){
+                            $('.info_book_author').html("No Author");
+                        }
+                        try{
+                            $('.info_book_press').html(book.publisher);
+                        }
+                        catch(err){
+                            $('.info_book_press').html("No Publisher");
+                        }
+                        try{
+                            $('.info_book_price').html(book.price);
+                        }
+                        catch(err){
+                            $('.info_book_price').html("Unknown");
+                        }
+                        try{
+                            $('.info_book_page').html(book.pages);
+                        }
+                        catch(err){
+                            $('.info_book_page').html("Unknown");
+                        }
+                        try{
+                            $('.info_book_isbn').html(book.isbn13);
+                        }
+                        catch(err){
+                            $('.info_book_isbn').html("Unknown");
+                        }
+                        try{
+                            $('.rating-num').html(book.rating.average);
+                        }
+                        catch(err){
+                            $('.rating-num').html("No grade");
+                        }
+                        try{
+                            $('.info_book_pubdate').html(book.pubdate);
+                        }
+                        catch(err){
+                            $('.info_book_pubdate').html("Unknown");
+                        }
+                        try{
+                            $('.summary').html(summary);
+                        }
+                        catch(err){
+                            $('.summary').html("Unknown");
+                        }
+                        try{
+                            $('.catalog').html(catalog);
+                        }
+                        catch(err){
+                            $('.catalog').html("Unknown");
+                        }       
+                        $('.add-shop-car').click(function(){
+                            window.location.href = 'pay.html?book_title=' + book.title + '&author=' + book.author + '&price=' + book.price;
+                        });
+                        $('.CN').click(function(){
+                            window.location.href = '../zh-cn/book_detail.html?isbn=' + isbn;
+                        });
+                });
+        </script>
+
+        </div>
+</div>
+  
+</body>
+    
+</html>

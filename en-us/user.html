@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>青岛大学-图书馆</title>
+    <!--Boostrap-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/book.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" >
+</head>
+
+<body>
+
+<div class="index-nav">
+    <div class="container">
+        <nav class="nav">
+            <a class="book-nav-item" href="index.html">Home Page</a>
+            <a class="book-nav-item" href="#">Cart</a>
+            <a class="book-nav-item" href="new_book.html">new book express</a>
+            <a class="book-nav-item" href="#">Subject</a>
+            <a class="book-nav-item" href="about.html" data-toggle="modal" data-target="#aboutus">About us</a>
+            <a class="book-nav-item pull-right" href="../zh-cn/user.html">中文</a>
+            <a class="book-nav-item signup login pull-right active" href="user.html">Sign in/Creat account</a>
+        </nav>
+    </div>
+</div>
+<div class="jumbotron search">
+    <div class="container">
+        <div class="row">
+            <div class="index-name col-xs-4 col-md-2">
+               青大图书            </div>
+            <div class="search-bar col-xs-8 col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="title、author、ISBN(s)">
+                    <span class="input-group-addon search_botton_background">
+                        <span class="glyphicon glyphicon-search search_botton"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="container" style="padding-top:30px">
+    <!--about us-->
+        <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="LoginLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="LoginLabel">About Us</h4>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <p align="center">
+                    走过人来人往<br/>
+                    不喜欢也得欣赏<br/>
+                    我是沉默的存在<br/><br/>
+
+                    不当你世界 只作你肩膀<br/>
+                    我们静静分享<br/>
+                    此刻难得的坦白<br/>
+                    虽是无声地交谈<br/>
+                    都感觉幸福 感觉不孤单<br/><br/>
+
+                    拒绝成长到成长<br/>
+                    变成想要的模样<br/>
+                    在举手投降以前<br/>
+                    让我再陪你一段<br/>
+                    陪你把沿路感想活出答案<br/>
+                    陪你把独自孤单变成勇敢<br/><br/>
+
+                    一次次失去又重来 我不离开<br/>
+                    陪伴 是最长情的告白<br/>
+                    陪你把想念的酸 拥抱成温暖<br/>
+                    陪你把彷徨 写出情节来<br/>
+                    未来多漫长 再漫长 还有期待<br/>
+                    陪伴你 一直到 故事给说完<br/><br/>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;   ----《陪你度过漫长岁月》
+                    </p>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!--    login panel    -->
+
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="#" class="active" id="login-form-link">Sign in</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="#" id="register-form-link">Registration</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="user name" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="password">
+									</div>
+									<div class="form-group text-center">
+										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+										<label for="remember"> Remember me?</label>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Sign in">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot your password?</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								<form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="User Name" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="PassWord">
+									</div>
+									<div class="form-group">
+										<input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Password again">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Creat your account">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+            
+    <div id="footer" class="">
+
+        <span id="icp" class="fleft gray-link">
+            © 2015－2016 David,Mark,Vinson all rights reserved Lehr         </span>
+
+        <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+
+        <script src="../js/jquery-3.0.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#login-form-link').click(function(e) {
+                    $("#login-form").delay(100).fadeIn(100);
+                    $("#register-form").fadeOut(100);
+                    $('#register-form-link').removeClass('active');
+                    $(this).addClass('active');
+                    e.preventDefault();
+                });
+                $('#register-form-link').click(function(e) {
+                    $("#register-form").delay(100).fadeIn(100);
+                    $("#login-form").fadeOut(100);
+                    $('#login-form-link').removeClass('active');
+                    $(this).addClass('active');
+                    e.preventDefault();
+                });
+
+            });
+        </script>
+    </div>
+</div>
+</body>
+    
+</html>

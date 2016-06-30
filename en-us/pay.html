@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>青岛大学-图书馆</title>
+    <!--Boostrap-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/shopping-car.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" >
+</head>
+
+<body>
+
+<div class="index-nav">
+    <div class="container">
+        <nav class="nav">
+            <a class="book-nav-item" href="index.html">Home Page</a>
+            <a class="book-nav-item" href="#">Cart</a>
+            <a class="book-nav-item active" href="new_book.html">New Release</a>
+            <a class="book-nav-item" href="#">Subject</a>
+            <a class="book-nav-item" href="about.html" data-toggle="modal" data-target="#aboutus">About us</a>
+            <a class="book-nav-item pull-right CN">中文</a>
+            <a class="book-nav-item signup login pull-right" href="user.html">Sign in/Creat Account</a>
+        </nav>
+    </div>
+</div>
+<div class="jumbotron search">
+    <div class="container">
+        <div class="row">
+            <div class="index-name col-xs-4 col-md-2">
+                青大图书
+            </div>
+            <div class="search-bar col-xs-8 col-md-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Title、Author、ISBN(s)">
+                    <span class="input-group-addon search_botton_background">
+                        <span class="glyphicon glyphicon-search search_botton"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="container">
+    <!--about us-->
+        <div class="modal fade" id="aboutus" tabindex="-1" role="dialog" aria-labelledby="LoginLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="LoginLabel">About us</h4>
+              </div>
+              <div class="modal-body">
+                  <div>
+                    <p align="center">
+                    走过人来人往<br/>
+                    不喜欢也得欣赏<br/>
+                    我是沉默的存在<br/><br/>
+
+                    不当你世界 只作你肩膀<br/>
+                    我们静静分享<br/>
+                    此刻难得的坦白<br/>
+                    虽是无声地交谈<br/>
+                    都感觉幸福 感觉不孤单<br/><br/>
+
+                    拒绝成长到成长<br/>
+                    变成想要的模样<br/>
+                    在举手投降以前<br/>
+                    让我再陪你一段<br/>
+                    陪你把沿路感想活出答案<br/>
+                    陪你把独自孤单变成勇敢<br/><br/>
+
+                    一次次失去又重来 我不离开<br/>
+                    陪伴 是最长情的告白<br/>
+                    陪你把想念的酸 拥抱成温暖<br/>
+                    陪你把彷徨 写出情节来<br/>
+                    未来多漫长 再漫长 还有期待<br/>
+                    陪伴你 一直到 故事给说完<br/><br/>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;   ----《陪你度过漫长岁月》
+                    </p>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row form-group">
+            <div>
+                <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                    <li class="active"><a href="#step-1">
+                        <h4 class="list-group-item-heading">Step One</h4>
+                        <p class="list-group-item-text">Choose the books you want to buy</p>
+                    </a></li>
+                    <li class="disabled"><a href="#step-2">
+                        <h4 class="list-group-item-heading">Step Two</h4>
+                        <p class="list-group-item-text">Fill out your address</p>
+                    </a></li>
+                    <li class="disabled"><a href="#step-3">
+                        <h4 class="list-group-item-heading">Step Three</h4>
+                        <p class="list-group-item-text">Register your payment method</p>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row setup-content" id="step-1">
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Books</th>
+                                <th></th>
+                                <th> </th>
+                                <th class="text-center">Price</th>
+                                <th class="text-center">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="item-one">
+                                <td class="col-md-6">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <h4 class="media-heading"><a href="#" class="car-book-title">Title</a></h4>
+                                        <h5 class="media-heading"> by <a href="#" class="car-book-author">Author</a></h5>
+                                        <span>Status: </span><span class="text-success"><strong>Stock</strong></span>
+                                    </div>
+                                </div></td>
+                                <td class="col-sm-1 col-md-1"></td>
+                                <td class="col-sm-1 col-md-1"></td>
+                                <td class="col-sm-1 col-md-1 text-center">￥<strong class="car-book-price"></strong></td>
+                                <td class="col-sm-1 col-md-1 text-center">￥<strong class="car-book-price"></strong></td>
+                            </tr>
+                            <tr>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td><h5>Books</h5></td>
+                                <td class="text-right"><h5>￥<strong class="car-book-price"></strong></h5></td>
+                            </tr>
+                            <tr>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td><h5>Freightage</h5></td>
+                                <td class="text-right"><h5>￥<strong>0.00</strong></h5></td>
+                            </tr>
+                            <tr>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td><h3>Total</h3></td>
+                                <td class="text-right"><h3>￥<strong class="car-book-sum-price"></strong></h3></td>
+                            </tr>
+                            <tr>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>   </td>
+                                <td>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                                </button></td>
+                                <td>
+                                <button type="button" class="btn btn-success" id="activate-step-2">
+                                    Submit Order <span class="glyphicon glyphicon-play"></span>
+                                </button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row setup-content" id="step-2">
+            <div class="col-xs-12">
+                <div class="col-md-12 well">
+                    <h1 class="text-center"> STEP 2</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row setup-content" id="step-3">
+            <div class="col-xs-12">
+                <div class="col-md-12 well">
+                    <h1 class="text-center"> STEP 3</h1>
+                </div>
+            </div>
+        </div>
+            
+    <div id="footer" class="">
+
+        <span id="icp" class="fleft gray-link">
+            © 2015－2016 David,Mark,Vinson all rights reserved Lehr
+        </span>
+
+        <a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+
+        <script src="../js/jquery-3.0.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+        </script>
+        <script>
+            var car_book_title = getParameterByName('book_title');
+            var car_book_author = getParameterByName('author');
+            var car_book_price = getParameterByName('price');
+            $('.car-book-title').html(car_book_title);
+            $('.car-book-author').html(car_book_author);
+            $('.car-book-price').html(car_book_price);
+            $('.car-book-sum-price').html(car_book_price);
+            $('.CN').click(function(){
+                window.location.href = '../zh-cn/pay.html?book_title=' + car_book_title + '&author=' + car_book_author + '&price=' + car_book_price;
+            });
+        </script>
+        
+        <script type="text/javascript">
+            
+            $('.button1').click(function(){
+               $('.item-one').hide();
+            });
+              $(document).ready(function() {
+
+                var navListItems = $('ul.setup-panel li a'),
+                    allWells = $('.setup-content');
+
+                allWells.hide();
+
+                navListItems.click(function(e)
+                {
+                    e.preventDefault();
+                    var $target = $($(this).attr('href')),
+                        $item = $(this).closest('li');
+
+                    if (!$item.hasClass('disabled')) {
+                        navListItems.closest('li').removeClass('active');
+                        $item.addClass('active');
+                        allWells.hide();
+                        $target.show();
+                    }
+                });
+
+                $('ul.setup-panel li.active a').trigger('click');
+
+                $('#activate-step-2').on('click', function(e) {
+                    $('ul.setup-panel li:eq(1)').removeClass('disabled');
+                    $('ul.setup-panel li a[href="#step-2"]').trigger('click');
+//                    $(this).remove();
+                })    
+            });
+
+        </script>
+
+        </div>
+</div>
+  
+</body>
+    
+</html>
